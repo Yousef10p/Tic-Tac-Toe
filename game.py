@@ -3,7 +3,7 @@ from tkinter.messagebox import *
 from time import sleep
 import random
 
-# @us10f ----- 3
+# @us10f
 
 
 
@@ -146,7 +146,10 @@ def computer_playes(board_copy, main_userTurnMarker, oponent_turnMarker):
     for indx in [1, 3, 7, 9]:
         if board_copy[indx] == 0:
             return indx
-
+    for key,value in board_copy.items():
+        if value == 0:
+            return key
+        
     return None
 
 
